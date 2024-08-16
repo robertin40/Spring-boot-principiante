@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Document</title>
+    <style>
+        body {
+            text-align: center;
+            color: blue;
+            font-size: 30px;
+            font-style: italic;
+        }
+        .li {
+            text-decoration: cadetblue;
+        }
+        .name-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Espacio entre los elementos */
+        }
+        .name-container li {
+            list-style-type: none; /* Quita el estilo de lista predeterminado */
+        }
+        .dot {
+            font-size: 40px; /* Tamaño del punto */
+            line-height: 1; /* Alineación vertical del punto */
+        }
+    </style>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+    <div class="name-container">
+        <span class="dot">•</span>
+        <li th:text="${name}"></li>
+        <span class="dot">•</span>
+        <li th:text="${lastname}"></li>
+    </div>
+</body>
+</html>
